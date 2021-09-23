@@ -1,0 +1,76 @@
+.people {
+  background-image: url("../images/people-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 57px 0 14px;
+}
+.people__title {
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 53px;
+}
+
+.people__logo-block {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.logo__block-text {
+  font-family: Lato sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: $WhiteColor;
+  text-align: center;
+  margin-bottom: 45px;
+}
+.people__logo-image {
+  padding-bottom: 25px;
+}
+
+
+.people__description {
+  font-family: Lato sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #A291A5;
+}
+
+@media (min-width: 481px) {
+  .people {
+    background-image: url("../images/peope-tablet-bg.jpg");
+    padding-bottom: 90px;
+  }
+  .people__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+  .people__title {
+    font-size: 42px;
+    line-height: 44px;
+  }
+}
+
+@media (min-width: 993px) {
+  .people {
+    padding-bottom: 114px;
+    background-image: url("../images/people994.jpg");
+  }
+  .people__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 110px 90px;
+  }
+  .people__title {
+    font-size: 48px;
+    line-height: 50px;
+  }
+}

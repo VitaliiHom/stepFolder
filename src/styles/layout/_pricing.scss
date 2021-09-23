@@ -1,0 +1,122 @@
+@import "../abstracts/mixins";
+.pricing {
+    background-image: url("../images/pricing.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffff;
+    text-align: center;
+    padding: 15px 0 20px;
+}
+.pricing__title {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 42px;
+    margin-bottom: 32px;
+}
+.pricing__box {
+    display: grid;
+    grid-template-columns: 260px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.pricing__item {
+    background-color: #5F5161;
+    padding-bottom: 65px;
+    min-height: 460px;
+    justify-self: stretch;
+    max-width: 260px;
+    @include flex($direction: column, $justify: space-between)
+}
+.pricing__item.pricing__active {
+    .costs__title {
+        background-color:#3F2C41;
+    }
+    .costs__price {
+        font-size: 82px;
+        line-height: 84px;
+    }
+    background-color: #473249;
+    min-height: 560px;
+    min-width: 290px;
+    justify-self: center;
+}
+.costs__title {
+    padding: 35px 0;
+    background-color: #695B6A;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.costs__price {
+    font-size: 60px;
+    line-height: 62px;
+    text-transform: uppercase
+}
+.costs__duration {
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+.costs__hr {
+    width: 60px;
+    height: 3px;
+    background-color:#8D81AC;
+    border: none;
+}
+.costs__about {
+    font-size: 16px;
+    line-height: 18px;
+}
+.costs__btn {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 15px;
+    background-color: #776B79;
+    border-color: transparent;
+    padding: 11px 25px;
+    border-radius:40px;
+    cursor: pointer;
+}
+@media (min-width: 481px) {
+    .pricing {
+        padding: 70px 0 90px;
+    }
+    .pricing__box {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        gap: 30px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .pricing__item.pricing__active {
+        justify-self: end;
+    }
+    .pricing__title {
+        font-size: 42px;
+        line-height: 44px;
+    }
+    .pricing__item {
+        opacity: 90%;
+    }
+}
+@media (min-width: 993px) {
+    .pricing {
+        padding: 80px 0 60px;
+    }
+    .pricing__box {
+        grid-template-columns: repeat(4, minmax(220px, 1fr));
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .pricing__title {
+        font-size: 48px;
+        line-height: 50px;
+        margin-bottom: 60px;
+    }
+    .pricing__item.pricing__active {
+        justify-self: center;
+    }
+}
